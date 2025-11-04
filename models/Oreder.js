@@ -10,7 +10,7 @@ const orederSchema = new mongoose.Schema({
     amount: { type: Number, required: true},
     address: { type: String, required: true, ref: 'address' },
     status: { type: String, required: true, default: 'Oreder Placed' },
-    date: { type: Number, required: true}
+    date: { type: Number, required: true},
 })
 
 const Order = mongoose.models.order || mongoose.model('order', orederSchema)
