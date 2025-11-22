@@ -13,10 +13,10 @@ El proyecto destaca por el uso de **Inngest** para el manejo de eventos en segun
 
 ## 🚀 Demo
 
-🔗 **[Ver Proyecto en Vivo](https://tu-deploy-aqui.com)** _(Reemplaza esto con tu link de Vercel si lo tienes)_
+<!-- 🔗 **[Ver Proyecto en Vivo](https://tu-deploy-aqui.com)** _(Reemplaza esto con tu link de Vercel si lo tienes)_ -->
 
-![Captura de pantalla de la Home](https://via.placeholder.com/800x400?text=Captura+de+Pantalla+NovaMarket)
-*(Puedes reemplazar esta imagen por una captura real de tu proyecto)*
+<!-- [Captura de pantalla de la Home](https://via.placeholder.com/800x400?text=Captura+de+Pantalla+NovaMarket) -->
+<!-- *(Puedes reemplazar esta imagen por una captura real de tu proyecto)* -->
 
 ## ✨ Funcionalidades Clave
 
