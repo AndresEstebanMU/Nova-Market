@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
+import { useAppContext } from '@/context/AppContext';
 
 const HeaderSlider = () => {
   const sliderData = [
     {
-      id: 1,
+      id: '6908f1bce363f825e4675224',
       title: "Experience Pure Sound - Your Perfect Headphones Awaits!",
       offer: "Limited Time Offer 30% Off",
       buttonText1: "Buy now",
       buttonText2: "Find more",
-      imgSrc: assets.header_headphone_image,
+      imgSrc: assets.bose_headphone_image,
     },
     {
-      id: 2,
+      id: '6908f287e363f825e4675230',
       title: "Next-Level Gaming Starts Here - Discover PlayStation 5 Today!",
       offer: "Hurry up only few lefts!",
       buttonText1: "Shop Now",
@@ -21,7 +22,7 @@ const HeaderSlider = () => {
       imgSrc: assets.header_playstation_image,
     },
     {
-      id: 3,
+      id: '6908f34de363f825e4675239',
       title: "Power Meets Elegance - Apple MacBook Pro is Here for you!",
       offer: "Exclusive Deal 40% Off",
       buttonText1: "Order Now",
@@ -30,12 +31,14 @@ const HeaderSlider = () => {
     },
   ];
 
+  const { router } = useAppContext()
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % sliderData.length);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [sliderData.length]);
 
@@ -44,8 +47,9 @@ const HeaderSlider = () => {
   };
 
   return (
-    <div className="overflow-hidden relative w-full">
+    <div className="overflow-hidden relative w-full" >
       <div
+        
         className="flex transition-transform duration-700 ease-in-out"
         style={{
           transform: `translateX(-${currentSlide * 100}%)`,
@@ -61,8 +65,8 @@ const HeaderSlider = () => {
               <h1 className="max-w-lg md:text-[40px] md:leading-[48px] text-2xl font-semibold">
                 {slide.title}
               </h1>
-              <div className="flex items-center mt-4 md:mt-6 ">
-                <button className="md:px-10 px-7 md:py-2.5 py-2 bg-orange-600 rounded-full text-white font-medium">
+              <div className="flex items-center mt-4 md:mt-6 " onClick={() => { router.push('/product/' + sliderData[index].id); scrollTo(0, 0) }}>
+                <button className="md:px-10 px-7 md:py-2.5 py-2 bg-orange-600 rounded-full text-white font-medium" >
                   {slide.buttonText1}
                 </button>
                 <button className="group flex items-center gap-2 px-6 py-2.5 font-medium">
