@@ -13,10 +13,10 @@ El proyecto destaca por el uso de **Inngest** para el manejo de eventos en segun
 
 ## 🚀 Demo
 
-<!-- 🔗 **[Ver Proyecto en Vivo](https://tu-deploy-aqui.com)** _(Reemplaza esto con tu link de Vercel si lo tienes)_ -->
+🔗 **[Ver Proyecto en Vivo](https://nova-market-rose.vercel.app/)**
 
-<!-- [Captura de pantalla de la Home](https://via.placeholder.com/800x400?text=Captura+de+Pantalla+NovaMarket) -->
-<!-- *(Puedes reemplazar esta imagen por una captura real de tu proyecto)* -->
+[Captura de pantalla de la Home](./assets/home.png)
+
 
 ## ✨ Funcionalidades Clave
 
@@ -41,5 +41,42 @@ Sigue estos pasos para correr el proyecto en tu entorno local:
 
 ### 1. Clonar el repositorio
 ```bash
-git clone [https://github.com/AndresEstebanMU/Nova-Market.git](https://github.com/AndresEstebanMU/Nova-Market.git)
+git clone https://github.com/AndresEstebanMU/Nova-Market.git
 cd Nova-Market
+```
+
+### 2. Instalar dependencias
+```bash
+npm install
+# o si usas yarn/pnpm
+yarn install
+```
+
+### 3. Configurar Variables de Entorno
+crea un nuevo archivo .env y añade tus credenciales. Debería verse similar a esto:
+```.env
+# Public Environment Variables
+NEXT_PUBLIC_CURRENCY=
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+
+# Private Environment Variables
+CLERK_SECRET_KEY=
+MONGODB_URI=
+INNGEST_SIGNING_KEY=
+INNGEST_EVENT_KEY=
+
+# Cloudinary
+CLOUDINARY_CLOUD_NAME =
+CLOUDINARY_API_KEY =
+CLOUDINARY_API_SECRET =
+```
+
+### 4. Ejecutar el servidor de desarrollo
+```Bash
+npm run dev
+```
+Abre http://localhost:3000 en tu navegador para ver la aplicación.
+
+### 5. Inicia sesión
+
+En la esquina superior derecha inicia sesión o crea una cuenta nueva para acceder al menú de usuario y poder hacer la compra ficticia de los productos de tu carrito.
